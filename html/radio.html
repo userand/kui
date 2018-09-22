@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title><br />
+	</head>
+	<body>
+   	    <div>
+   	     	<h5>您最喜欢哪门语言</h5>
+            <label><input class="radio" type="radio" name="radio" checked> <span></span> java</label>
+             <label><input class="radio" type="radio" name="radio" > <span></span> php</label>
+              <label><input class="radio" type="radio" name="radio" > <span></span> python</label>
+               <label><input class="radio" type="radio" name="radio" > <span></span> javascript</label>
+
+        </div>      
+       	<br />
+   	   <div>
+   	   	 	<h5>您最喜欢那些城市</h6>
+            <label><input class="checkbox" type="checkbox"  checked> <span></span> 北京</label>
+            <label><input class="checkbox" type="checkbox" checked> <span></span> 上海</label>
+            <label><input class="checkbox" type="checkbox" checked> <span></span> 杭州</label>
+            <label><input class="checkbox" type="checkbox" checked> <span></span> 西安</label>
+       </div>
+      <style>
+        input{
+        	outline: none;
+        }
+		.radio,.checkbox {
+
+		    display: none;
+		   
+		}
+		
+		.radio +span,.checkbox +span{
+			width: 1.2rem;
+		    height: 1.2rem;
+		    background-color: #ffffff;
+		    border: solid 1px #dddddd;
+		    -webkit-border-radius: 0.6rem;
+		    border-radius: 0.6rem;
+		    font-size: 0.8rem;
+		    margin: 0;
+		    padding: 0;
+		    position: relative;
+		    display: inline-block;
+		    vertical-align: top;
+		    cursor: default;
+		    -webkit-appearance: none;
+		}
+		
+		.checkbox +span {
+    		border-radius: 0.1rem;
+		}
+		
+		.radio:checked +span,.checkbox:checked +span{
+			background-color: #04c9e8;
+		    border: solid 1px #00adc8;
+		    box-shadow: 0 1px 1px rgba(0,0,0,.1);
+		    text-align: center;
+		    background-clip: padding-box;
+		}
+		
+		.radio:checked +span:before,.checkbox:checked +span:before{
+			content: '';
+		    width: 0.5rem;
+		    height: 0.3rem;
+		    border: 1px solid #ffffff;
+		    border-top: none;
+		    border-right: none;
+		    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    margin-left: -0.25rem;
+		    margin-top: -0.25rem;
+		    -webkit-transform: rotate(-45deg);
+		            transform: rotate(-45deg);
+		}
+		
+	
+       </style> 
+	</body>
+</html>

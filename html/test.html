@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<!--	<script type="text/javascript" src="../js/util.js" ></script>-->
+		
+		<script src="../js/kui.js" type="text/javascript" charset="utf-8"></script>
+	
+	</head>
+	<body>
+		
+	<style>
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			input,
+			button {
+				outline: none;
+			}
+			
+			.modal {
+				display: inline-block;
+				position: absolute;
+				z-index: 2;
+				background: #fff;
+				border: 1px solid #e3e8ee;
+				border-radius: 6px;
+				transition: all 2s ease-in-out;
+				transform: scale(0);
+				opacity: 0;
+			}
+			
+			.modal-header {
+				border-bottom: 1px solid #e3e8ee;
+				padding: 14px 16px;
+				line-height: 1;
+			}
+			
+			.modal-content {
+				position: relative;
+				background-color: #fff;
+				border: 0;
+				border-radius: 6px;
+				background-clip: padding-box;
+			}
+			
+			.modal-body {
+				padding: 16px;
+				font-size: 16px;
+				line-height: 1.5;
+			}
+			
+			.modal-footer {
+				border-top: 1px solid #e3e8ee;
+				padding: 12px 18px;
+				text-align: right;
+			}
+			
+			.modal-close {
+				font-size: 12px;
+				position: absolute;
+				right: 16px;
+				top: 8px;
+				overflow: hidden;
+				cursor: pointer;
+			}
+			
+			.mask {
+				background: rgba(0, 0, 0, .5);
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+				transition: all .2s ease-in-out;
+				opacity: 0;
+			}
+			
+			.btn {
+				display: inline-block;
+				margin-bottom: 0;
+				font-weight: 400;
+				vertical-align: middle;
+				-ms-touch-action: manipulation;
+				touch-action: manipulation;
+				cursor: pointer;
+				background-image: none;
+				border: 1px solid #d7dde4;
+				white-space: nowrap;
+				line-height: 1.5;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+				padding: 6px 15px;
+				font-size: 12px;
+				border-radius: 4px;
+				transform: translate3d(0, 0, 0);
+				transition: color .2s linear, background-color .2s linear, border .2s linear;
+				color: #657180;
+				background-color: #f7f7f7;
+			}
+			
+			.btn-primary {
+				color: #fff;
+				background-color: #39f;
+				border-color: #39f;
+			}
+			
+			.btn-text {
+				color: #657180;
+				background-color: transparent;
+				border-color: transparent;
+			}
+		</style>
+<button id="1">1</button>
+		<button id="2">2</button>
+		<script>
+			
+			window.onload = function(){
+				
+				
+				
+			var obtn = document.getElementsByTagName('button');
+			for(var i = 0; i < obtn.length; i++) {
+				obtn[i].addEventListener('click', function(ev) {
+					if(ev.target.id == 1) {
+						new Modal({
+							dir: 'top'
+						});
+					} else if(ev.target.id == 2) {
+						new Modal({
+							width: 220,
+							height: 160,
+							dir: 'center',
+							title: '确定删除吗？',
+							maskclose: false,
+							ok: function() {
+								window.open('http://www.baidu.com')
+							}
+						});
+					}
+				})
+
+				}				
+		}
+		</script>
+	</body>
+</html>

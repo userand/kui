@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>模态框</title>
+		<link rel="stylesheet" href="../css/kui.css" />
+		<script type="text/javascript" src="../js/kui.js" ></script>
+	</head>
+	<body>
+		<button class="btn btn-info" id="btn1">距离顶部20px</button>
+		<button class="btn btn-info" id="btn2">垂直居中 点遮罩不可关闭</button>
+		<script>
+		window.onload = function(){
+			var obtn = document.getElementsByTagName('button');
+			for(var i = 0; i < obtn.length; i++) {
+				obtn[i].addEventListener('click', function(ev) {
+					if(ev.target.id == 'btn1') {
+						new Modal({
+							dir: 'top'
+						});
+					} else if(ev.target.id == 'btn2') {
+						new Modal({
+							dir: 'center',
+							title: '确定删除吗？',
+							maskclose: false,
+							ok: function() {
+								window.open('http://www.baidu.com')
+							}
+						});
+					}
+				})
+			}				
+		}
+		</script>
+	</body>
+</html>

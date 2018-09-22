@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="../css/kui.css" />
+		<script src="../js/kui.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		
+		<div class="tabs tab-box" id="tab1">
+			<div class="tabs-nav">
+					<a class="tab-btn active">热门文章</a>
+					<a class="tab-btn">最新文章</a>
+					<a class="tab-btn">一周热门</a>
+			</div>
+			<div class="tabs-body">
+					<div class="tab active">
+						热门文章
+					</div>
+					<div class="tab">
+						最新文章
+					</div>
+					<div class="tab">
+						一周热门
+					</div>
+			</div>
+		</div>
+		
+		
+		<div class="tabs tab-box" id="tab2">
+			<div class="tabs-nav">
+					<a class="tab-btn active">热门文章</a>
+					<a class="tab-btn">最新文章</a>
+					<a class="tab-btn">一周热门</a>
+			</div>
+			<div class="tabs-body">
+					<div class="tab active">
+						热门文章
+					</div>
+					<div class="tab">
+						最新文章
+					</div>
+					<div class="tab">
+						一周热门
+					</div>
+			</div>
+		</div>		
+		
+		
+		<script type="text/javascript">
+			window.onload = function(){
+				
+			 new tabs('tab1',{autoplay:true });
+		 	 new tabs('tab2',{autoplay:false,events:'mouseover'});
+			
+			
+			}
+		</script>
+
+
+	</body>
+
+</html>
